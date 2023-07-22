@@ -14,6 +14,7 @@ import pic7 from '../../../assets/pic7.png'
 import pic8 from '../../../assets/pic8.png'
 import pic9 from '../../../assets/pic9.png'
 import pic10 from '../../../assets/pic10.png'
+import CollegeCard from '../CollegeCard/CollegeCard';
 
 const Home = () => {
     return (
@@ -43,6 +44,7 @@ const Home = () => {
                 <SwiperSlide> <img className='w-full h-96' src={pic9} alt="photo" /> </SwiperSlide>
                 <SwiperSlide> <img className='w-full h-96' src={pic10} alt="photo" /> </SwiperSlide>
             </Swiper>
+            <CollegeCard/>
         </div>
     );
 };

@@ -4,8 +4,8 @@ import logo from '../../assets/logo.png'
 
 const Navbar = () => {
     return (
-        <div className='bg-red-50 px-10'>
-            <div className="navbar sticky z-50">
+        <div className='bg-yellow-50 px-10 sticky top-0 z-50'>
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

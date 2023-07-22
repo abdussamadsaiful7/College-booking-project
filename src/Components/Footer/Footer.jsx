@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer p-10 bg-yellow-50 text-base-content">
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>
@@ -26,10 +26,10 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+            <footer className="footer px-10 py-4 border-t bg-yellow-50 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
                     <img className='w-32 h-32' src={logo} alt="" />
-                    <p>ACME Industries Ltd. <br />Providing reliable tech since 1992</p>
+                    <p>Edu-Plus Admission Academy. <br />Providing reliable tech since 2010</p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
             </footer>
             <div className='text-center'>
-                <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                <p>Copyright © 2023 - All right reserved by Edu-Plus Admission Academy</p>
             </div>
         </div>
     );
