@@ -26,31 +26,31 @@ const CollegeGallery = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/XYJSksh/gra6.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/XYJSksh/gra6.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/8cwm1GC/gra2.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/8cwm1GC/gra2.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/B3NYJHj/gra3.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/B3NYJHj/gra3.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/XDBfKTZ/gra4.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/XDBfKTZ/gra4.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/pbQm8xP/gra5.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/pbQm8xP/gra5.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/P56Pmxk/gra7.png" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/P56Pmxk/gra7.png" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/LSN7qGC/gra8.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/LSN7qGC/gra8.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/C6WNPRd/gra9.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/C6WNPRd/gra9.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96' src="https://i.ibb.co/m6ngmc4/gra10.jpg" />
+                    <img className='w-full h-96 rounded' src="https://i.ibb.co/m6ngmc4/gra10.jpg" />
                 </SwiperSlide>
             </Swiper>
         </div>
