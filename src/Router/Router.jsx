@@ -1,9 +1,10 @@
 import {
     createBrowserRouter,
-    RouterProvider,
   } from "react-router-dom";
 import Main from "../Components/Main/Main";
 import Home from "../Components/HomePage/Home/Home";
+import CollegeDetails from "../Components/HomePage/CollegeCard/CollegeDetails";
+import CollegeCard from "../Components/HomePage/CollegeCard/CollegeCard";
 
 
   const router = createBrowserRouter([
@@ -14,6 +15,15 @@ import Home from "../Components/HomePage/Home/Home";
         {
           path: '/',
           element: <Home/>
+        },
+        {
+          path: '/collegeCard',
+          element: <CollegeCard/>,
+        },
+        {
+          path: '/colleges/:id',
+          element: <CollegeDetails/>,
+          loader: ({params}) =>fetch(`http://localhost:5070/colleges/${params.id}`)
         }
       ]
     },

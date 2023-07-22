@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const CollegeCard = () => {
 
@@ -15,7 +15,7 @@ const CollegeCard = () => {
 };
 
     useEffect(() => {
-        fetch("collegeData.json")
+        fetch("http://localhost:5070/colleges")
             .then(res => res.json())
             .then(data => setCards(data))
     }, [])
@@ -23,7 +23,7 @@ const CollegeCard = () => {
     return (
         <div className='py-20 px-10'>
             <div className='text-center'>
-                <input value={searchValue} onChange={handleSearch} type="text" placeholder="Search college name" className="input input-bordered input-info w-96 mb-10 max-" />
+                <input value={searchValue} onChange={handleSearch} type="text" placeholder="Search college name" className="input input-bordered input-info md:w-96 mb-10 max-" />
             </div>
             <div className='md:grid grid-cols-3 gap-6  font-serif'>
                 {
@@ -38,7 +38,7 @@ const CollegeCard = () => {
                                 <p className='text-sm'>Sports: {card.sports}</p>
                                 <div className=''>
                                     <button className='btn btn-outline btn-xs rounded-none'>
-                                        <Link>Details</Link>
+                                        <Link to={`/colleges/${card._id}`}>Details</Link>
                                     </button>
                                 </div>
                             </div>

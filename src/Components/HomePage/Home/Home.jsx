@@ -16,6 +16,7 @@ import pic9 from '../../../assets/pic9.png'
 import pic10 from '../../../assets/pic10.png'
 import CollegeCard from '../CollegeCard/CollegeCard';
 import Sponsor from '../Sponsor/Sponsor';
+import CollegeGallery from '../CollegeGallery/CollegeGallery';
 
 const Home = () => {
     return (
@@ -47,6 +48,7 @@ const Home = () => {
             </Swiper>
             <CollegeCard/>
             <Sponsor/>
+            <CollegeGallery/>
         </div>
     );
 };

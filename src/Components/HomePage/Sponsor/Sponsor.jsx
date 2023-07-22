@@ -16,15 +16,15 @@ const Sponsor = () => {
             <h1 className='text-center font-serif font-extrabold text-3xl'>Sponsor by</h1>
             <Marquee>
                 <div className='grid grid-cols-9 gap-14 py-10'>
-                    <img className='w-full h-20' src={icon1} alt="icon" />
-                    <img className='w-full h-20' src={icon2} alt="icon" />
-                    <img className='w-full h-20' src={icon3} alt="icon" />
-                    <img className='w-full h-20' src={icon4} alt="icon" />
-                    <img className='w-full h-20' src={icon5} alt="icon" />
-                    <img className='w-full h-20' src={icon6} alt="icon" />
-                    <img className='w-full h-20' src={icon7} alt="icon" />
-                    <img className='w-full h-20' src={icon8} alt="icon" />
-                    <img className='w-full h-20' src={icon9} alt="icon" />
+                    <img className='w-64 h-14' src={icon1} alt="icon" />
+                    <img className='w-64 h-14' src={icon2} alt="icon" />
+                    <img className='w-64 h-14' src={icon3} alt="icon" />
+                    <img className='w-64 h-14' src={icon4} alt="icon" />
+                    <img className='w-64 h-14' src={icon5} alt="icon" />
+                    <img className='w-64 h-14' src={icon6} alt="icon" />
+                    <img className='w-64 h-14' src={icon7} alt="icon" />
+                    <img className='w-64 h-14' src={icon8} alt="icon" />
+                    <img className='w-64 h-14' src={icon9} alt="icon" />
                 </div>
 
             </Marquee>
