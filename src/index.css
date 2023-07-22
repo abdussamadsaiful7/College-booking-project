@@ -10,3 +10,16 @@
     text-decoration: underline;
     text-decoration-color: blue;
 }
+
+.card-container {
+  height: 450px; 
+  display: flex;
+  flex: 1;
+}
+
+.college-link{
+  text-decoration-color: blue;
+}
+.college-link:hover{
+  color: red;
+}

@@ -48,10 +48,16 @@ const Review = () => {
                                 rounded-md h-[400px] hover:shadow-2xl duration-300 '>
                                     <div className='text-xs p-6'>
                                         <p className='text-center'>{rev.message}</p>
-                                        <p className='font-bold mt-4 text-center'>{rev.category}</p>
-                                        <div>
+                                        <p className='font-bold mt-4 mb-2 text-center'>{rev.category}</p>
+                                        <div className='flex items-center justify-around'>
                                             <p>{rev.ratings}</p>
-
+                                            <div className="rating rating-xs">
+                                                <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                                                <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                                                <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                                                <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                                                <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                                            </div>
                                         </div>
                                         <hr />
                                         <p className='text-center mt-2'>{rev.name}</p>

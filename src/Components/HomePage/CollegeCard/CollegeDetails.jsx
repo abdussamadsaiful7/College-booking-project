@@ -17,7 +17,16 @@ const CollegeDetails = () => {
                     <p>Events: {events}</p>
                     <p>Research: {research}</p>
                     <p>Sports: {sports}</p>
-                    <p>Ratings: {ratings}</p>
+                    <div className='flex justify-start gap-10 items-center'>
+                        <p>Ratings: {ratings}</p>
+                        <div className="rating rating-xs">
+                            <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                            <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                            <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                            <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                            <input type="radio" name="rating-4" className="mask mask-star-2 bg-blue-500" checked />
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <img className='w-full h-72' src={img} alt="" />

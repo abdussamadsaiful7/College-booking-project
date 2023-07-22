@@ -14,12 +14,12 @@ import pic8 from '../../../assets/pic8.png'
 import pic9 from '../../../assets/pic9.png'
 import pic10 from '../../../assets/pic10.png'
 import pic11 from '../../../assets/banner3.jpg'
-import CollegeCard from '../CollegeCard/CollegeCard';
 import Sponsor from '../Sponsor/Sponsor';
 import CollegeGallery from '../CollegeGallery/CollegeGallery';
 import Research from '../Research/Research';
 import Review from '../Review/Review';
 import AddReview from '../Review/AddReview';
+import CollegeCard from '../CollegeCard/CollegeCard';
 
 
 const Home = () => {
