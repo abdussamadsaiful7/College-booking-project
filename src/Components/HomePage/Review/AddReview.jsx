@@ -66,7 +66,7 @@ const AddReview = () => {
 
 
     return (
-        <div className='py-20 font-serif'>
+        <div className='py-14 font-serif'>
             <h1 className='text-center text-3xl font-extrabold mb-2'>People talk about us</h1>
             <p className='text-center md:mx-32 mx-10 mb-4'>We are Eduplus, an admission website helping students with educational opportunities. At Eduplus, we provide guidance and support for students seeking admissions. Our platform simplifies the application process and offers valuable resources. Join us on the journey to academic success.</p>
             <div className=" md:flex items-center justify-center gap-8">

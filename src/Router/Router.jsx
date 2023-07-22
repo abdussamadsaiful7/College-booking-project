@@ -5,6 +5,7 @@ import Main from "../Components/Main/Main";
 import Home from "../Components/HomePage/Home/Home";
 import CollegeDetails from "../Components/HomePage/CollegeCard/CollegeDetails";
 import CollegeCard from "../Components/HomePage/CollegeCard/CollegeCard";
+import Review from "../Components/HomePage/Review/Review";
 
 
   const router = createBrowserRouter([
@@ -24,7 +25,7 @@ import CollegeCard from "../Components/HomePage/CollegeCard/CollegeCard";
           path: '/colleges/:id',
           element: <CollegeDetails/>,
           loader: ({params}) =>fetch(`http://localhost:5070/colleges/${params.id}`)
-        }
+        },
       ]
     },
   ]);
