@@ -23,7 +23,7 @@ const CollegeCard = () => {
     return (
         <div className='py-20 px-10'>
             <div className='text-center'>
-                <input value={searchValue} onChange={handleSearch} type="text" placeholder="Search college name" className="input input-bordered input-info w-96 mb-6 max-" />
+                <input value={searchValue} onChange={handleSearch} type="text" placeholder="Search college name" className="input input-bordered input-info w-96 mb-10 max-" />
             </div>
             <div className='md:grid grid-cols-3 gap-6  font-serif'>
                 {
