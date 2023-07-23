@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -20,9 +20,11 @@ import Research from '../Research/Research';
 import Review from '../Review/Review';
 import AddReview from '../Review/AddReview';
 import CollegeCard from '../CollegeCard/CollegeCard';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Home = () => {
+    const {user} =useContext(AuthContext);
     return (
         <div>
             <Swiper
@@ -56,7 +58,9 @@ const Home = () => {
             <CollegeGallery/>
             <Research/>
             <Review/>
-            <AddReview/>
+            {
+                user?.email &&   <AddReview/> 
+            }
         </div>
     );
 };

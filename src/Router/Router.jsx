@@ -32,7 +32,7 @@ import FourPage from "../Components/F404Page/FourPage";
         },
         {
           path: '/colleges/:id',
-          element: <CollegeDetails/>,
+          element: <PrivateRoute><CollegeDetails/></PrivateRoute>,
           loader: ({params}) =>fetch(`http://localhost:5070/colleges/${params.id}`)
         },
         {
