@@ -8,6 +8,8 @@ import CollegeCard from "../Components/HomePage/CollegeCard/CollegeCard";
 import Review from "../Components/HomePage/Review/Review";
 import Admission from "../Components/Admission/Admission";
 import Login from "../Components/Login/Login";
+import SignUp from "../Components/SignUp/SignUp";
+import Profile from "../Components/Profile/Profile";
 
 
   const router = createBrowserRouter([
@@ -35,6 +37,14 @@ import Login from "../Components/Login/Login";
         {
           path: '/login',
           element: <Login/>
+        },
+        {
+          path: '/signUp',
+          element: <SignUp/>
+        },
+        {
+          path: '/profile',
+          element: <Profile/>
         }
       ]
     },

@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const [show, setShow] = useState([]);
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
     return (
         <div className='bg-yellow-50 px-10 sticky top-0 z-50'>
             <div className="navbar">
@@ -29,7 +41,34 @@ const Navbar = () => {
                         <li className='link'> <Link to="/collegeCard" >COLLEGE</Link> </li>
                         <li className='link'><Link to='/admission'>ADMISSION</Link></li>
                         <li className='link'><Link>MY COLLEGE</Link></li>
-                        <li className='link' ><Link to='/login'>LOGIN</Link></li>
+                        <li>
+                            {
+                                user ?
+                                    <>
+
+                                        <Link><button onClick={handleLogout} className="link">
+                                            LOGOUT</button></Link>
+
+                                    </>
+                                    :
+                                    <>
+                                        <Link to='/login'><button className="link"> LOGIN</button></Link>
+                                    </>
+                            }
+
+                        </li>
+                        <li>
+                            {
+                                user && (
+                                    <Link to='/profile' className="avatar tooltip tooltip-bottom" data-tip={"User Profile"}>
+                                        <div className="w-8 h-8 rounded-full 
+                                            ring ring-primary ring-offset-base-100 ring-offset-2">
+                                            <img src={user?.photoURL} />
+                                        </div>
+                                    </Link>
+                                )
+                            }
+                        </li>
                     </ul>
                 </div>
             </div>
