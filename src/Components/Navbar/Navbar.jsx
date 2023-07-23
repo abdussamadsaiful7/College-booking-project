@@ -16,7 +16,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-yellow-50 px-10 sticky top-0 z-50'>
+        <div className=' px-10 bg-yellow-50 sticky top-0 z-50'>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -27,7 +27,7 @@ const Navbar = () => {
                             <li className='link' ><Link to="/">HOME</Link></li>
                             <li className='link' > <Link to="/collegeCard">COLLEGE</Link> </li>
                             <li className='link' ><Link to='/admission'>ADMISSION</Link></li>
-                            <li className='link' ><Link>MY COLLEGE</Link></li>
+                            <li className='link' ><Link to='/myCollege'>MY COLLEGE</Link></li>
                             <li className='link' ><Link to='/login'>LOGIN</Link></li>
                         </ul>
                     </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
                         <li className='link'><Link to="/">HOME</Link></li>
                         <li className='link'> <Link to="/collegeCard" >COLLEGE</Link> </li>
                         <li className='link'><Link to='/admission'>ADMISSION</Link></li>
-                        <li className='link'><Link>MY COLLEGE</Link></li>
+                        <li className='link'><Link to='/myCollege'>MY COLLEGE</Link></li>
                         <li>
                             {
                                 user ?

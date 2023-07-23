@@ -29,13 +29,13 @@ const Admission = () => {
                 <div className='md:flex items-center justify-between'>
                     <div className='md:w-1/2'>
                         <div className='flex flex-col gap-2 px-4'>
-                            <Link className='underline college-link' >Harmony University College</Link>
-                            <Link className='underline college-link' >TechHub Institute</Link>
-                            <Link className='underline college-link' >Creative Arts Academy</Link>
-                            <Link className='underline college-link' >UIBA Science & Technology University</Link>
-                            <Link className='underline college-link' >Business Management Institute</Link>
-                            <Link className='underline college-link' >Medical Sciences College</Link>
-                            <Link className='btn btn-xs btn-outline btn-primary w-20 my-10'>See more</Link>
+                            <Link to='/addForm' className='underline college-link' >Harmony University College</Link>
+                            <Link to='/addForm' className='underline college-link' >TechHub Institute</Link>
+                            <Link to='/addForm' className='underline college-link' >Creative Arts Academy</Link>
+                            <Link to='/addForm' className='underline college-link' >UIBA Science & Technology University</Link>
+                            <Link to='/addForm' className='underline college-link' >Business Management Institute</Link>
+                            <Link to='/addForm' className='underline college-link' >Medical Sciences College</Link>
+                            <Link to='/addForm' className='btn btn-xs btn-outline btn-primary w-20 my-10'>See more</Link>
                         </div>
                     </div>
                     <div className='md:w-1/2'>

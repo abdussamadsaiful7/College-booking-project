@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Lottie from "lottie-react";
-import groovyWalkAnimation from "../../../assets/animation_review.json";
+import groovyWalkAnimation from "../../assets/admission.json";
 import toast from 'react-hot-toast';
 
 
 const image_hosting_token = import.meta.env.VITE_Image_Upload_token;
 //console.log(image_hosting_token);
 
-const AddReview = () => {
+const AddForm = () => {
     const [data, setData] = useState({}); // Create state to hold form data
 
     const handleAddReview = async (event) => {
@@ -17,10 +17,12 @@ const AddReview = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const ratings = form.ratings.value;
+        const phone = form.phone.value;
+        const birthday = form.birthday.value;
         const image = form.image.files[0]; // Get the image file
-        const category = form.category.value;
-        const message = form.message.value;
+        const college = form.college.value;
+        const subject = form.subject.value;
+        const address = form.address.value;
 
         // Upload image to ImgBB
         const image_hosting_token = import.meta.env.VITE_Image_Upload_token;
@@ -37,11 +39,11 @@ const AddReview = () => {
             console.log("Image URL:", imageUrl);
 
             // Send data to MongoDB
-            const newReview = { name, email, category, ratings, message, image: imageUrl };
+            const newReview = { name, subject, email, birthday, college, phone, address, image: imageUrl };
             console.log("New Review:", newReview);
 
             // Use your API URL for sending data to MongoDB
-            const apiURL = "http://localhost:5070/reviews";
+            const apiURL = "http://localhost:5070/myCollege";
             const mongoResponse = await fetch(apiURL, {
                 method: 'POST',
                 headers: {
@@ -67,8 +69,9 @@ const AddReview = () => {
 
     return (
         <div className='py-14 font-serif'>
-            <h1 className='text-center text-3xl font-extrabold mb-4'>Provide Your valuable Review!!!</h1>
-            <div className=" md:flex items-center justify-center gap-8">
+            <h1 className='text-center text-3xl font-extrabold mb-2'>Please, Fill in the Admission form</h1>
+            <p className='text-center md:mx-32 mx-10 mb-4'>We are Eduplus, an admission website helping students with educational opportunities. At Eduplus, we provide guidance and support for students seeking admissions. Our platform simplifies the application process and offers valuable resources. Join us on the journey to academic success.</p>
+            <div className=" md:flex items-center justify-center gap-10">
                 <div>
                     <Lottie className='w-full h-72' animationData={groovyWalkAnimation} loop={true} />
                 </div>
@@ -77,12 +80,14 @@ const AddReview = () => {
 
                     <input type="email" placeholder="Enter your Email" className="input input-bordered input-primary w-full" name="email" /><br />
 
-                    <input type="text" placeholder="Enter your Ratings" className="input input-bordered input-primary w-full" name="ratings" /><br />
+                    <input type="date" placeholder="Enter your Birthday" className="input input-bordered input-primary w-full" name="birthday" /><br />
+
+                    <input type="text" placeholder="Enter your phone number" className="input input-bordered input-primary w-full" name="phone" /><br />
 
                     <input type="file" name="image" className="file-input file-input-bordered file-input-primary
                      w-full" /> <br />
 
-                    <select defaultValue="Select College" name="category" className="select select-primary w-full">
+                    <select defaultValue="Select College" name="college" className="select select-primary w-full">
                         <option disabled >Select College</option>
                         <option>Harmony University College</option>
                         <option>TechHub Institute</option>
@@ -92,7 +97,9 @@ const AddReview = () => {
                         <option>Medical Sciences College</option>
                     </select><br />
 
-                    <textarea name="message" className="textarea textarea-primary w-full" placeholder="Message"></textarea> <br />
+                    <input type="text" placeholder="Enter your Subject" className="input input-bordered input-primary w-full" name="subject" /> <br />
+
+                    <textarea name="address" className="textarea textarea-primary w-full" placeholder="Address"></textarea> <br />
 
                     <input className='btn btn-primary' type="submit" value="Submit" />
                 </form>
@@ -102,4 +109,4 @@ const AddReview = () => {
     );
 };
 
-export default AddReview;
+export default AddForm;
