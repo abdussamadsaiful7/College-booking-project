@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../assets/admission.json";
 import toast from 'react-hot-toast';
+import { useParams } from 'react-router-dom';
 
 
 const image_hosting_token = import.meta.env.VITE_Image_Upload_token;
 //console.log(image_hosting_token);
 
 const AddForm = () => {
-    const [data, setData] = useState({}); // Create state to hold form data
+   
 
     const handleAddReview = async (event) => {
         event.preventDefault();
@@ -23,6 +24,7 @@ const AddForm = () => {
         const college = form.college.value;
         const subject = form.subject.value;
         const address = form.address.value;
+        const itemId = form.itemId.value;
 
         // Upload image to ImgBB
         const image_hosting_token = import.meta.env.VITE_Image_Upload_token;
@@ -39,7 +41,7 @@ const AddForm = () => {
             console.log("Image URL:", imageUrl);
 
             // Send data to MongoDB
-            const newReview = { name, subject, email, birthday, college, phone, address, image: imageUrl };
+            const newReview = { name, itemId:data._id, subject, email, birthday, college, phone, address, image: imageUrl };
             console.log("New Review:", newReview);
 
             // Use your API URL for sending data to MongoDB
@@ -110,3 +112,5 @@ const AddForm = () => {
 };
 
 export default AddForm;
+
+

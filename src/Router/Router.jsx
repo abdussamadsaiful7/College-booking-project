@@ -12,12 +12,15 @@ import SignUp from "../Components/SignUp/SignUp";
 import Profile from "../Components/Profile/Profile";
 import AddForm from "../Components/Admission/AddForm";
 import MyCollege from "../Components/MyCollege/MyCollege";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import FourPage from "../Components/F404Page/FourPage";
 
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main/>,
+      errorElement: <FourPage></FourPage>,
       children: [
         {
           path: '/',
@@ -34,7 +37,8 @@ import MyCollege from "../Components/MyCollege/MyCollege";
         },
         {
           path: '/admission',
-          element: <Admission/>
+          element: <Admission/>,
+          
         },
         {
           path: '/login',
@@ -47,6 +51,7 @@ import MyCollege from "../Components/MyCollege/MyCollege";
         {
           path: '/profile',
           element: <Profile/>
+
         },
         {
           path: '/addForm',
@@ -54,7 +59,7 @@ import MyCollege from "../Components/MyCollege/MyCollege";
         },
         {
           path: '/myCollege',
-          element: <MyCollege/>
+          element: <PrivateRoute><MyCollege/></PrivateRoute>
         }
       ]
     },

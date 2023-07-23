@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Review from '../HomePage/Review/Review';
 import AddReview from '../HomePage/Review/AddReview';
+import { Link } from 'react-router-dom';
 
 const MyCollege = () => {
     const { user } = useContext(AuthContext);
@@ -21,10 +22,10 @@ const MyCollege = () => {
         <div className='md:p-14 p-6 font-serif'>
             <h1 className='text-center font-serif text-3xl'>List of Applied Students:
                 {myCollege.length}</h1>
-            <div>
+            <div className='py-10'>
                 {
                     myCollege.map(my =>
-                        <div className='md:flex items-center justify-between' key={my._id} my={my}>
+                        <div className='md:flex items-center justify-between py-10' key={my._id} my={my}>
                             <div>
                                 <h1 className='text-xl font-semibold'>Candidate Information:</h1>
                                 <p>Name: {my.name}</p>
@@ -35,6 +36,7 @@ const MyCollege = () => {
                                 <hr />
                                 <p>Applied Subject: {my.subject}</p>
                                 <p>Applied College/University: {my.college}</p>
+                                <Link to='/collegeCard'> <button className='btn btn-xs btn-outline btn-primary rounded-none mt-3'>View College Details</button> </Link>
                             </div>
                             <div>
                                 <img className='w-72 h-64 rounded' src={my.image} alt="photo" />
@@ -43,7 +45,7 @@ const MyCollege = () => {
                     )
                 }
             </div>
-            <AddReview/>
+            <AddReview />
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -6,6 +6,7 @@ import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 
 const Admission = () => {
+
     return (
         <div className='md:p-14'>
             <h1 className='text-center font-serif font-semibold text-xl'>Unlock Your Success: Step into Greatness with Admission!</h1>
@@ -30,7 +31,7 @@ const Admission = () => {
                     <div className='md:w-1/2'>
                         <div className='flex flex-col gap-2 px-4'>
                             <Link to='/addForm' className='underline college-link' >Harmony University College</Link>
-                            <Link to='/addForm' className='underline college-link' >TechHub Institute</Link>
+                            <Link   className='underline college-link' >TechHub Institute</Link>
                             <Link to='/addForm' className='underline college-link' >Creative Arts Academy</Link>
                             <Link to='/addForm' className='underline college-link' >UIBA Science & Technology University</Link>
                             <Link to='/addForm' className='underline college-link' >Business Management Institute</Link>
