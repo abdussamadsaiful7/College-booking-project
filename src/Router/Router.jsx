@@ -7,6 +7,7 @@ import CollegeDetails from "../Components/HomePage/CollegeCard/CollegeDetails";
 import CollegeCard from "../Components/HomePage/CollegeCard/CollegeCard";
 import Review from "../Components/HomePage/Review/Review";
 import Admission from "../Components/Admission/Admission";
+import Login from "../Components/Login/Login";
 
 
   const router = createBrowserRouter([
@@ -30,6 +31,10 @@ import Admission from "../Components/Admission/Admission";
         {
           path: '/admission',
           element: <Admission/>
+        },
+        {
+          path: '/login',
+          element: <Login/>
         }
       ]
     },

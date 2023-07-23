@@ -16,7 +16,7 @@ const Navbar = () => {
                             <li className='link' > <Link to="/collegeCard">COLLEGE</Link> </li>
                             <li className='link' ><Link to='/admission'>ADMISSION</Link></li>
                             <li className='link' ><Link>MY COLLEGE</Link></li>
-                            <li className='link' ><Link>LOGIN</Link></li>
+                            <li className='link' ><Link to='/login'>LOGIN</Link></li>
                         </ul>
                     </div>
                     <div className='flex items-center'>
@@ -29,7 +29,7 @@ const Navbar = () => {
                         <li className='link'> <Link to="/collegeCard" >COLLEGE</Link> </li>
                         <li className='link'><Link to='/admission'>ADMISSION</Link></li>
                         <li className='link'><Link>MY COLLEGE</Link></li>
-                        <li className='link' ><Link>LOGIN</Link></li>
+                        <li className='link' ><Link to='/login'>LOGIN</Link></li>
                     </ul>
                 </div>
             </div>
