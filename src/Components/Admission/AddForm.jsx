@@ -24,7 +24,7 @@ const AddForm = () => {
         const college = form.college.value;
         const subject = form.subject.value;
         const address = form.address.value;
-        const itemId = form.itemId.value;
+       
 
         // Upload image to ImgBB
         const image_hosting_token = import.meta.env.VITE_Image_Upload_token;
@@ -41,11 +41,11 @@ const AddForm = () => {
             console.log("Image URL:", imageUrl);
 
             // Send data to MongoDB
-            const newReview = { name, itemId:data._id, subject, email, birthday, college, phone, address, image: imageUrl };
+            const newReview = { name,  subject, email, birthday, college, phone, address, image: imageUrl };
             console.log("New Review:", newReview);
 
             // Use your API URL for sending data to MongoDB
-            const apiURL = "http://localhost:5070/myCollege";
+            const apiURL = "https://college-booking-server-hazel.vercel.app/myCollege";
             const mongoResponse = await fetch(apiURL, {
                 method: 'POST',
                 headers: {

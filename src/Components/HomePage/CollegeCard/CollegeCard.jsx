@@ -18,7 +18,7 @@ const CollegeCard = () => {
     };
 
     useEffect(() => {
-        fetch("http://localhost:5070/colleges")
+        fetch("https://college-booking-server-hazel.vercel.app/colleges")
             .then(res => res.json())
             .then(data => setCards(data))
     }, [])

@@ -41,7 +41,7 @@ const AddReview = () => {
             console.log("New Review:", newReview);
 
             // Use your API URL for sending data to MongoDB
-            const apiURL = "http://localhost:5070/reviews";
+            const apiURL = "https://college-booking-server-hazel.vercel.app/reviews";
             const mongoResponse = await fetch(apiURL, {
                 method: 'POST',
                 headers: {

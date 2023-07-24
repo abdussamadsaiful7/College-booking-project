@@ -33,7 +33,7 @@ import FourPage from "../Components/F404Page/FourPage";
         {
           path: '/colleges/:id',
           element: <PrivateRoute><CollegeDetails/></PrivateRoute>,
-          loader: ({params}) =>fetch(`http://localhost:5070/colleges/${params.id}`)
+          loader: ({params}) =>fetch(`https://college-booking-server-hazel.vercel.app/colleges/${params.id}`)
         },
         {
           path: '/admission',
@@ -55,7 +55,7 @@ import FourPage from "../Components/F404Page/FourPage";
         },
         {
           path: '/addForm',
-          element: <AddForm/>
+          element: <PrivateRoute><AddForm/></PrivateRoute>
         },
         {
           path: '/myCollege',

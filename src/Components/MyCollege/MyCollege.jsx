@@ -10,7 +10,7 @@ const MyCollege = () => {
 
     console.log(myCollege);
 
-    const url = `http://localhost:5070/myCollege?email%20=${user?.email}`
+    const url = `https://college-booking-server-hazel.vercel.app/myCollege?email%20=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

@@ -9,7 +9,7 @@ const Review = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5070/reviews")
+        fetch("https://college-booking-server-hazel.vercel.app/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
