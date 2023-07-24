@@ -36,7 +36,7 @@ const Admission = () => {
                             <Link to='/addForm' className='underline college-link' >UIBA Science & Technology University</Link>
                             <Link to='/addForm' className='underline college-link' >Business Management Institute</Link>
                             <Link to='/addForm' className='underline college-link' >Medical Sciences College</Link>
-                            <Link to='/addForm' className='btn btn-xs btn-outline btn-primary w-20 my-10'>See more</Link>
+                            <Link to='' className='btn btn-xs btn-outline btn-primary w-20 my-10'>See more</Link>
                         </div>
                     </div>
                     <div className='md:w-1/2'>
